@@ -2,9 +2,11 @@ const express = require('express');
 const taskRoutes = require('./routes/tasks');
 
 const app = express();
+
 app.get('/', (req, res) => {
   res.json({ message: 'Task API is running' });
 });
+
 
 app.use(express.json());
 app.use('/tasks', taskRoutes);
