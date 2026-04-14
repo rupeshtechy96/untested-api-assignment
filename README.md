@@ -1,3 +1,19 @@
+# Task API — Take-Home Assignment
+
+This project implements a small task management API using **Node.js and Express**.
+
+The goal of the assignment was to:
+
+* understand an unfamiliar codebase
+* write tests for existing functionality
+* identify and fix bugs
+* implement a new feature
+* document design decisions
+
+The API uses an **in-memory datastore** and includes **automated tests using Jest and Supertest**.
+--------------
+
+
 # Take-Home Assignment — The Untested API
 
 A 2-day take-home assignment. You'll read unfamiliar code, write tests, track down bugs, and ship a small feature.
@@ -111,3 +127,63 @@ See [ASSIGNMENT.md](./ASSIGNMENT.md) for full submission requirements. At minimu
 - **Bug report** — what you found, where in the code, and why it's a bug (not just symptoms)
 - **At least one fix** — with a note on your approach
 - **`PATCH /tasks/:id/assign` implementation** — plus a short explanation of any design decisions (validation, edge cases, etc.)
+
+
+## Test Coverage
+
+The project includes integration and unit tests written using **Jest** and **Supertest**.
+
+Coverage report:
+
+* API endpoints tested
+* Edge cases included
+* Error handling validated
+
+Coverage is generated using:
+
+```
+npm run coverage
+```
+--
+## Example API Requests
+
+### Create Task
+
+```
+POST /tasks
+```
+
+Body:
+
+```
+{
+  "title": "Write tests",
+  "priority": "high"
+}
+```
+
+---
+
+### Assign Task
+
+```
+PATCH /tasks/:id/assign
+```
+
+Body:
+
+```
+{
+  "assignee": "John"
+}
+```
+
+---
+
+### Mark Task Complete
+
+```
+PATCH /tasks/:id/complete
+```
+
+
