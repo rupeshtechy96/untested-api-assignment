@@ -54,19 +54,27 @@ npm run coverage   # run with coverage report
 
 ## Project Structure
 
-```
-task-api/
-  src/
-    app.js                  # Express app setup
-    routes/tasks.js         # Route handlers
-    services/taskService.js # Business logic + in-memory data store
-    utils/validators.js     # Input validation helpers
-  tests/                    # Your tests go here
-  package.json
-  jest.config.js
-ASSIGNMENT.md               # Full brief — read this first
-```
 
+task-api/
+│
+├── src/
+│ ├── app.js # Express application setup
+│ ├── routes/
+│ │ └── tasks.js # API route definitions
+│ ├── services/
+│ │ └── taskService.js # Business logic and in-memory data store
+│ └── utils/
+│ └── validators.js # Input validation helpers
+│
+├── tests/
+│ └── tasks.test.js # Integration tests
+│
+├── BUG_REPORT.md # Identified bugs and fixes
+├── FEATURE_DECISIONS.md # Feature implementation explanation
+├── package.json
+└── jest.config.js
+
+---
 > The data store is in-memory. It resets every time the server restarts.
 
 ---
@@ -138,7 +146,16 @@ Coverage report:
 * API endpoints tested
 * Edge cases included
 * Error handling validated
+---
 
+
+
+<img width="738" height="350" alt="image" src="https://github.com/user-attachments/assets/a8ac07ce-a9e3-428e-a399-c1e3e6bede16" />
+
+
+
+
+---
 Coverage is generated using:
 
 ```
